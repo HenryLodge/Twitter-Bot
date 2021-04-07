@@ -16,7 +16,7 @@ def limit_handle(cursor):
 
 
 # public_tweets = tweepy.Cursor(api.home_timeline()).items(200)
-for tweet in tweepy.Cursor(api.home_timeline).items(200):
+for tweet in tweepy.Cursor(api.home_timeline).items(50):
     try:
     	limit_handle(tweet.favorite())
     except tweepy.TweepError as e:
